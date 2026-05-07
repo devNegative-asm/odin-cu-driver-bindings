@@ -2117,7 +2117,7 @@ foreign lib {
     cuStreamDestroy_v2                                   :: proc(hStream: CUstream) -> CUresult ---
     cuEventCreate                                        :: proc(phEvent: ^CUevent, Flags: CUevent_flags) -> CUresult ---
     cuEventRecord                                        :: proc(hEvent: CUevent, hStream: CUstream) -> CUresult ---
-    cuEventRecordWithFlags                               :: proc(hEvent: CUevent, hStream: CUstream, flags: c.uint) -> CUresult ---
+    cuEventRecordWithFlags                               :: proc(hEvent: CUevent, hStream: CUstream, flags: CUevent_record_flags) -> CUresult ---
     cuEventQuery                                         :: proc(hEvent: CUevent) -> CUresult ---
     cuEventSynchronize                                   :: proc(hEvent: CUevent) -> CUresult ---
     cuEventElapsedTime                                   :: proc(pMilliseconds: ^f32, hStart: CUevent, hEnd: CUevent) -> CUresult ---
